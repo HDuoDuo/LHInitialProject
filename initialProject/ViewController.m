@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-
 @interface ViewController ()
 
 @end
@@ -16,9 +15,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor greenColor];
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(50, 50, 100, 50)];
+    btn.backgroundColor = [UIColor redColor];
+    [self.view addSubview:btn];
+    [btn addTarget:self action:@selector(HAH) forControlEvents:UIControlEventTouchUpInside];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
-
+- (void)HAH {
+   
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
